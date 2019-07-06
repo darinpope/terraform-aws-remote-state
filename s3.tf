@@ -36,7 +36,7 @@ resource "aws_s3_bucket" "remote_state_bucket" {
     target_prefix = "logs/"
   }
 
-  tags {
+  tags = {
     Name      = "Terraform Remote State bucket"
     Env       = "${var.aws_environment}"
     Comment   = "used to store Terraform state files"
