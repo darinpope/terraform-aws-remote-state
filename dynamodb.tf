@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "state_locking_table" {
     type = "S"
   }
 
-  tags {
+  tags = {
     Name      = "terraform-state-locking"
     Env       = "${var.aws_environment}"
     Comment   = "used for Terraform state locking and consistency"
